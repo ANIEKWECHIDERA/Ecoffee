@@ -2,21 +2,125 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Marcellus&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Marcellus&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  user-select: none;
+  text-decoration: none;
+  list-style: none;
 }
 
 :root {
   --16px: 1rem;
+  --15px: 0.938rem;
   --20px: 1.25rem;
-
   --32px: 2rem;
   --48px: 3rem;
   --64px: 4rem;
   --400px: 25rem;
+}
+
+header {
+  font-family: "Manrope", sans-serif;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff9f1cc;
+  padding: var(--48px) var(--64px);
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo-container img {
+  width: 64.64px;
+  margin-top: 5px;
+}
+
+.logo-container p {
+  font: inherit;
+  font-size: var(--15px);
+  font-weight: 600;
+}
+
+nav {
+  display: flex;
+  min-width: 10%;
+  gap: 52px;
+  align-items: center;
+  transition: all 150ms ease;
+}
+
+.bi-list {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  gap: 52px;
+}
+
+nav ul li a {
+  font: inherit;
+  color: #54400e;
+  font-weight: 400;
+  font-size: var(--15px);
+  padding: 5px 10px;
+  border-radius: 50px;
+  transition: all 150ms ease;
+}
+
+nav ul li a:hover {
+  background-color: #54400e1f;
+  padding: 5px 10px;
+  border-radius: 50px;
+  /* color: #fff9f1; */
+  transition: all 150ms ease;
+}
+
+.bi-search {
+  font-size: 24px;
+  padding: 5px 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.bi-search:hover {
+  background-color: #54400e1f;
+  padding: 5px 10px;
+  border-radius: 50px;
+  transition: all 150ms ease;
+}
+
+.nav-btn {
+  font: inherit;
+  color: white;
+  font-weight: 700;
+  font-size: var(--15px);
+  background-color: #54400e;
+  padding: 15px 40px;
+  border-radius: 50px;
+  transition: all 150ms ease;
+}
+
+.nav-btn:hover {
+  background-color: transparent;
+  color: #54400e;
+  transition: all 150ms ease;
+  outline: 1px solid #54400e;
 }
 
 body {
@@ -74,6 +178,7 @@ main {
   margin: 0 auto;
   width: 70%;
   align-items: center;
+  transition: all 150ms ease;
 }
 
 .coffe-details {
@@ -143,12 +248,87 @@ main {
   transition: all 150ms ease;
 }
 
-@media (max-width: 33.438rem) {
+@media (max-width: 43.75rem) {
   .abst-img {
     width: 100%;
     left: -210px;
     margin-right: 0;
     margin-bottom: 20px;
     max-width: 100%;
+  }
+
+  header {
+    padding: 10px 20px;
+    align-items: flex-start;
+  }
+
+  .logo-container {
+    padding-top: 30px;
+    position: relative;
+  }
+
+  nav ul {
+    display: block;
+  }
+
+  nav ul li {
+    margin: 20px 0;
+  }
+
+  nav .nav-btn {
+    display: block;
+    margin: 20px 0;
+    padding: 5px 10px;
+    text-align: center;
+  }
+
+  nav {
+    display: inline-block;
+    text-align: right;
+    padding: 100px 7% 0;
+    max-height: 100px;
+    overflow: hidden;
+    transition: all 150ms ease;
+  }
+
+  .bi-list {
+    display: block;
+    position: fixed;
+    top: 37px;
+    right: 7%;
+    color: #54400e;
+    font-size: 30px;
+    border: 1px solid #54400e1f;
+    border-radius: 5px;
+    padding: 0 5px;
+  }
+
+  .bi-search {
+    display: block;
+    position: fixed;
+    top: 37px;
+    right: 20%;
+  }
+
+  .hidemenu {
+    transition: all 150ms ease;
+    max-height: 100%;
+  }
+}
+
+@media (min-width: 43rem) and (max-width: 72.563rem) {
+  header {
+    padding: var(--48px) var(--20px);
+  }
+  nav {
+    gap: 10px;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+
+  .nav-btn {
+    padding: 10px 20px;
   }
 }

@@ -5,9 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop</title>
     <link rel="stylesheet" href="../css/shop.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
-    <header></header>
+    <header>
+      <div class="logo-container">
+        <img src="../asset/logo.png" alt="logo">
+        <p>MY FIRST COFFEE</p>
+      </div>
+      <nav id="navBar" >
+        <ul>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+        <i class="bi bi-search"></i>
+        <a href="#" class="nav-btn">Shop</a>
+        <i class="bi bi-list" onclick="showMenu()"></i>
+      </nav>
+    </header>
 
     <main>
       <section class="hero-sctn">
@@ -156,5 +174,12 @@
         </div>
       </section>
     </main>
+    <script>
+      const navBar = document.getElementById('navBar');
+
+      function showMenu(){
+          navBar.classList.toggle('hidemenu');
+      }
+  </script>
   </body>
 </html>
