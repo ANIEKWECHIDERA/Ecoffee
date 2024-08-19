@@ -243,6 +243,7 @@ main {
   padding: 5px 40px 0 40px;
   transition: all 150ms ease;
 }
+
 .coffe-details button:hover {
   background-color: #dfd6c15b;
   transition: all 150ms ease;
